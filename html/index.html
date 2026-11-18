@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="아랑과 슬이의 캐릭터 디자인, 이모티콘, 3D 모델링 졸업작품 전시"
+    >
+
+    <title>메인 | 아랑슬</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+
+    <style>
+        body.home-page {
+            margin: 0;
+            background: #f4f0e6;
+            color: #203247;
+            font-family: "Pretendard", "Malgun Gothic", sans-serif;
+            line-height: 1.8;
+        }
+
+        body.home-page *,
+        body.home-page *::before,
+        body.home-page *::after {
+            box-sizing: border-box;
+        }
+
+        body.home-page a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        body.home-page button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        body.home-page .skip {
+            position: fixed;
+            top: -100px;
+            left: 16px;
+            z-index: 100;
+            padding: 10px 16px;
+            background: #ffffff;
+            color: #142d4e;
+        }
+
+        body.home-page .skip:focus {
+            top: 12px;
+        }
+
+        body.home-page a:focus-visible,
+        body.home-page button:focus-visible {
+            outline: 3px solid #d9839b;
+            outline-offset: 4px;
+        }
+
+        body.home-page .site-header {
+            position: relative;
+            top: auto;
+            z-index: 20;
+            margin: 0;
+            background: #102842;
+            border-bottom: 1px solid #b79a61;
+            color: #fff8e9;
+        }
+
+        body.home-page .header-inner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 32px);
+            max-width: 1200px;
+            min-height: 76px;
+            margin-inline: auto;
+            padding: 12px 48px;
+            gap: 24px;
+        }
+
+        body.home-page .logo {
+            flex-shrink: 0;
+            font-family: "Noto Serif KR", "Batang", serif;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0.04em;
+        }
+
+        body.home-page .site-header .logo span {
+            display: none;
+        }
+
+        body.home-page .site-header nav {
+            position: static;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
+
+        body.home-page .site-header nav a {
+            position: relative;
+            display: block;
+            padding: 12px 0;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        body.home-page .site-header nav a:hover,
+        body.home-page .site-header nav a[aria-current="page"] {
+            color: #e4c990;
+        }
+
+        body.home-page .site-header nav a[aria-current="page"]::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background: #b79a61;
+        }
+
+        body.home-page .menu-toggle {
+            display: none;
+        }
+
+        body.home-page .arang-banner {
+            position: relative;
+            display: block;
+            width: calc(100% - 32px);
+            max-width: 1200px;
+            height: auto;
+            min-height: 0;
+            margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
+            container-type: inline-size;
+            background: #102842;
+            color: #fff8e9;
+        }
+
+        body.home-page .arang-banner-image {
+            position: static;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            min-height: 0;
+            margin: 0;
+            padding: 0;
+            aspect-ratio: auto;
+            object-fit: contain;
+            object-position: center;
+            transform: none;
+        }
+
+        body.home-page .arang-banner-content {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 4%;
+            width: 35%;
+            margin: 0;
+            padding: 0;
+            transform: translateY(-50%);
+        }
+
+        body.home-page .arang-banner-label {
+            display: inline-block;
+            max-width: 100%;
+            margin: 0 0 1.8cqw;
+            padding: 0.45cqw 0.9cqw;
+            border: 1px solid #c9ad73;
+            border-radius: 999px;
+            color: #f1dbab;
+            font-family: "Malgun Gothic", sans-serif;
+            font-size: 0.8cqw;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 0;
+        }
+
+        body.home-page .arang-banner-content h1 {
+            margin: 0 0 2cqw;
+            padding: 0;
+            color: #fff8e9;
+            font-family: "Noto Serif KR", "Batang", serif;
+            font-size: 3.3cqw;
+            font-weight: 600;
+            line-height: 1.45;
+            letter-spacing: -0.045em;
+            word-break: keep-all;
+            text-shadow: 0 2px 8px #00000033;
+        }
+
+        body.home-page .arang-banner-description {
+            margin: 0;
+            padding: 0;
+            color: #e0e6ee;
+            font-family: "Malgun Gothic", sans-serif;
+            font-size: 1.25cqw;
+            font-weight: 400;
+            line-height: 1.9;
+            letter-spacing: 0;
+        }
+
+        body.home-page .arang-banner-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            gap: 2cqw;
+            margin: 2cqw 0 0;
+            padding: 0.7cqw 1.8cqw;
+            border: 1px solid #e4c17a;
+            border-radius: 999px;
+            background: #091e3488;
+            color: #f1d396;
+            font-size: 1.15cqw;
+            font-weight: 600;
+            line-height: 1.6;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        body.home-page .arang-banner-button span {
+            font-size: 1.8cqw;
+            line-height: 1;
+        }
+
+        body.home-page .arang-banner-button:hover {
+            background: #e4c17a;
+            color: #142d4e;
+        }
+
+        body.home-page main > .wrap,
+        body.home-page .footer-inner {
+            width: calc(100% - 32px);
+            max-width: 1200px;
+            margin-inline: auto;
+        }
+
+        body.home-page .section {
+            padding-block: 64px;
+        }
+
+        body.home-page .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        body.home-page .section-title::after {
+            content: "";
+            flex: 1;
+            order: 0;
+            height: 1px;
+            background: #d9cfba;
+        }
+
+        body.home-page .section-title > span {
+            order: 1;
+            color: #b79a61;
+            font-size: 27px;
+        }
+
+        body.home-page .eyebrow {
+            margin: 0 0 14px;
+            color: #806737;
+            font-size: 11px;
+            line-height: 1.6;
+            letter-spacing: 0.2em;
+        }
+
+        body.home-page .section-title .eyebrow {
+            margin-bottom: 10px;
+        }
+
+        body.home-page .section-title h2,
+        body.home-page .story h2 {
+            margin: 0;
+            color: #203247;
+            font-family: "Noto Serif KR", "Batang", serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.45;
+            letter-spacing: -0.04em;
+        }
+
+        body.home-page .works {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        body.home-page .work-card {
+            display: block;
+            min-width: 0;
+        }
+
+        body.home-page .card-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #eae5d9;
+        }
+
+        body.home-page .card-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        body.home-page .work-card:hover .card-image img {
+            transform: scale(1.035);
+        }
+
+        body.home-page .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0 8px;
+        }
+
+        body.home-page .card-meta h3 {
+            margin: 0;
+            font-family: "Noto Serif KR", "Batang", serif;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        body.home-page .card-meta > span {
+            color: #806737;
+            font-size: 12px;
+        }
+
+        body.home-page .card-meta > span:last-child {
+            margin-left: auto;
+            font-size: 23px;
+        }
+
+        body.home-page .work-card > p {
+            margin: 0;
+            color: #66707b;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        body.home-page .story {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            align-items: center;
+            gap: 48px;
+            border-top: 1px solid #d9cfba;
+        }
+
+        body.home-page .story > div {
+            min-width: 0;
+        }
+
+        body.home-page .story-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #e8e1d4;
+        }
+
+        body.home-page .story-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        body.home-page .story h2 {
+            margin-bottom: 24px;
+        }
+
+        body.home-page .story p:not(.eyebrow) {
+            margin: 0 0 24px;
+            color: #66707b;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        body.home-page .text-link {
+            display: inline-block;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #b79a61;
+            color: #142d4e;
+            font-size: 14px;
+        }
+
+        body.home-page .site-footer {
+            margin-top: 24px;
+            border-top: 1px solid #b79a61;
+            background: #142d4e;
+            color: #f4f0e6;
+        }
+
+        body.home-page .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            padding-block: 32px;
+        }
+
+        body.home-page .site-footer .logo span {
+            display: block;
+            font-family: "Malgun Gothic", sans-serif;
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 2.5;
+            letter-spacing: 0.2em;
+        }
+
+        body.home-page .site-footer p {
+            margin: 0;
+            color: #c4cfdb;
+            font-size: 13px;
+        }
+
+        body.home-page .site-footer small {
+            font-size: 9px;
+            letter-spacing: 0.12em;
+        }
+
+        body.home-page .footer-top {
+            font-size: 12px;
+        }
+
+        @media (max-width: 1000px) {
+            body.home-page .header-inner {
+                padding-inline: 24px;
+            }
+
+            body.home-page .section {
+                padding-block: 48px;
+            }
+
+            body.home-page .works {
+                gap: 20px;
+            }
+
+            body.home-page .card-meta h3 {
+                font-size: 21px;
+            }
+
+            body.home-page .story {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body.home-page .header-inner {
+                min-height: 66px;
+                padding-inline: 12px;
+                gap: 16px;
+            }
+
+            body.home-page .site-header .logo {
+                font-size: 26px;
+            }
+
+            body.home-page .menu-toggle {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 12px;
+                border: 1px solid #b79a6166;
+                background: transparent;
+                color: #fff8e9;
+                font-size: 13px;
+            }
+
+            body.home-page .site-header nav {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+                padding: 16px 24px;
+                border: 1px solid #b79a6166;
+                background: #102842;
+            }
+
+            body.home-page .site-header nav.open {
+                display: flex;
+            }
+
+            body.home-page .site-header nav a {
+                padding: 10px 0;
+            }
+
+            body.home-page .section {
+                padding-block: 40px;
+            }
+
+            body.home-page .works,
+            body.home-page .story {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 30px;
+            }
+
+            body.home-page .section-title h2,
+            body.home-page .story h2 {
+                font-size: 27px;
+            }
+
+            body.home-page .card-meta h3 {
+                font-size: 23px;
+            }
+
+            body.home-page .story p:not(.eyebrow) {
+                font-size: 14px;
+            }
+
+            body.home-page .footer-inner {
+                flex-wrap: wrap;
+                padding-block: 28px;
+            }
+        }
+
+        @media (orientation: portrait) {
+            body.home-page .arang-banner {
+                width: 100%;
+                max-width: none;
+                margin-inline: 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body.home-page *,
+            body.home-page *::before,
+            body.home-page *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="home-page">
+    <a class="skip" href="#main">본문 바로가기</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="logo" href="index.html">
+                아랑슬
+                <span>ARANG &amp; SEUL</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="navigation"
+            >
+                메뉴
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav id="navigation" aria-label="주 메뉴">
+                <a href="index.html" aria-current="page">홈</a>
+                <a href="concept.html">디자인 콘티</a>
+                <a href="illust.html">이모티콘</a>
+                <a href="3Drender.html">3D 모델링</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section
+            class="arang-banner"
+            aria-labelledby="hero-title"
+        >
+            <img
+                class="arang-banner-image"
+                src="../image/index/달빛 아래 연등 든 아랑과 슬.png"
+                alt="달빛 아래 연등을 든 아랑과 슬이"
+                fetchpriority="high"
+                loading="eager"
+            >
+
+            <div class="arang-banner-content">
+                <p class="arang-banner-label">
+                    ARANG &amp; SEUL · GRADUATION EXHIBITION
+                </p>
+
+                <h1 id="hero-title">
+                    우리의 이야기가<br>
+                    피어나다
+                </h1>
+
+                <p class="arang-banner-description">
+                    무궁화를 닮은 슬이,<br>
+                    그 곁을 지키는 아랑.<br>
+                    전통의 아름다움을 담은<br>
+                    캐릭터 졸업 전시입니다.
+                </p>
+
+                <a class="arang-banner-button" href="#works">
+                    작품 둘러보기
+                    <span aria-hidden="true">›</span>
+                </a>
+            </div>
+        </section>
+
+        <section
+            id="works"
+            class="wrap section"
+            aria-labelledby="works-title"
+        >
+            <div class="section-title">
+                <div>
+                    <p class="eyebrow">SELECTED WORKS</p>
+                    <h2 id="works-title">선보이는 작품들</h2>
+                </div>
+
+                <span aria-hidden="true">✧</span>
+            </div>
+
+            <div class="works">
+                <a class="work-card" href="concept.html">
+                    <div class="card-image">
+                        <img
+                            src="../image/index/디자인 콘티.png"
+                            alt="아랑과 슬이의 디자인 콘티"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="card-meta">
+                        <span>01</span>
+                        <h3>디자인 콘티</h3>
+                        <span aria-hidden="true">↗</span>
+                    </div>
+
+                    <p>아이디어에서 캐릭터가 되기까지</p>
+                </a>
+
+                <a class="work-card" href="illust.html">
+                    <div class="card-image">
+                        <img
+                            src="../image/index/이모티콘.png"
+                            alt="아랑과 슬이의 이모티콘"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="card-meta">
+                        <span>02</span>
+                        <h3>이모티콘</h3>
+                        <span aria-hidden="true">↗</span>
+                    </div>
+
+                    <p>표정과 몸짓으로 전하는 마음</p>
+                </a>
+
+                <a class="work-card" href="3Drender.html">
+                    <div class="card-image">
+                        <img
+                            src="../image/index/아랑과 슬 모델링.png"
+                            alt="아랑과 슬이의 3D 모델링"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="card-meta">
+                        <span>03</span>
+                        <h3>3D 모델링</h3>
+                        <span aria-hidden="true">↗</span>
+                    </div>
+
+                    <p>평면을 넘어 입체로 만나는 세계</p>
+                </a>
+            </div>
+        </section>
+
+        <section
+            class="story wrap section"
+            aria-labelledby="story-title"
+        >
+            <div class="story-image">
+                <img
+                    src="../image/index/무궁화 곁의 아랑과 슬.png"
+                    alt="무궁화를 만지는 슬이를 다정하게 바라보는 아랑"
+                    loading="lazy"
+                >
+            </div>
+
+            <div>
+                <p class="eyebrow">OUR STORY</p>
+
+                <h2 id="story-title">
+                    꽃을 돌보던 마음이<br>
+                    이야기가 되다.
+                </h2>
+
+                <p>
+                    아랑이 정성껏 돌보던 무궁화가 슬이라는 사람의 모습으로
+                    피어납니다. 자연을 아끼는 마음과 무궁화의 아름다움이
+                    두 캐릭터를 통해 하나의 이야기로 이어집니다.
+                </p>
+
+                <a
+                    class="text-link"
+                    href="concept.html#characters"
+                >
+                    아랑과 슬이 만나기 ↗
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <a class="logo" href="index.html">
+                아랑슬
+                <span>ARANG &amp; SEUL</span>
+            </a>
+
+            <p>
+                졸업작품_LJS<br>
+                <small>GRADUATION CHARACTER EXHIBITION</small>
+            </p>
+
+            <a class="footer-top" href="#main">
+                맨 위로 ↑
+            </a>
+        </div>
+    </footer>
+
+    <dialog
+        id="lightbox"
+        aria-labelledby="lightbox-title"
+    >
+        <button
+            type="button"
+            class="close"
+            aria-label="확대 보기 닫기"
+        >
+            닫기 ×
+        </button>
+
+        <div class="modal-image"></div>
+        <h2 id="lightbox-title"></h2>
+    </dialog>
+</body>
+</html>
